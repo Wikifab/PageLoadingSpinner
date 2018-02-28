@@ -1,0 +1,51 @@
+{
+	"name": "PageLoadingSpinner",
+	"version": "1.0.0",
+	"author": [
+		"Pierre Boutet"
+	],
+	"url": "https://github.com/Wikifab/PageLoadingSpinner",
+	"descriptionmsg": "pageloadingspinner-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"PageLoadingSpinner\\Hooks": "includes/Hooks.php"
+	},
+	"Hooks": {
+		"EditPage::showEditForm:initial": [
+			"PageLoadingSpinner\\Hooks::start"
+		],
+		"FormEdit::showEditForm:initial": [
+			"PageLoadingSpinner\\Hooks::start"
+		],
+		"BeforePageDisplay": [
+			"PageLoadingSpinner\\Hooks::onBeforePageDisplay"
+		]
+	},
+	"MessagesDirs": {
+		"PageMediaGallery": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.pageLoadingSpinner.js": {
+			"scripts": [
+				"page-loading-spinner.js"
+			],
+			"dependencies": [
+				"oojs",
+				"ext.pageLoadingSpinner.css"
+			]
+		},
+		"ext.pageLoadingSpinner.css": {
+			"styles": [
+				"page-loading-spinner.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "PageLoadingSpinner/modules"
+	},
+	"manifest_version": 1
+}

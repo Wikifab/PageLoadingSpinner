@@ -1,0 +1,7 @@
+{
+    "name": "wikifab/page-loading-spinner",
+    "description": "This is a mediawiki extension to add a loding spinner while edit page is net yet fully loaded",
+    "type": "mediawiki-extension",
+    "require": {
+    }
+}
