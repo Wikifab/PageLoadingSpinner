@@ -26,7 +26,7 @@ class Hooks {
 		$out->addModules ( 'ext.pageLoadingSpinner.js' );
 		$out->addModuleStyles ( 'ext.pageLoadingSpinner.css' );
 
-		$out->addHTML('<div class="loadingLayer"><div class="loadingSpinner"><i class="fa fa-spinner fa-spin"></i></div></div>');
+		$out->addHTML('<div class="loadingLayer"><div class="loadingSpinner"><p>'.wfMessage('pageloadingspinner-loadinglayer-label').'</p><i class="fa fa-spinner fa-spin"></i></div></div>');
 
 	}
 
