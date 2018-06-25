@@ -1,10 +1,11 @@
 
 $('.loadingLayer').appendTo('body');
-$('body').addClass('pls-page-loading');
 
 $('document').ready(function () {
 
-	$('body').removeClass('pls-page-loading');
+	$('body').css('position', 'relative');
+	$('body').css('right', 'initial');
+	$('body').css('left', 'initial');
 	
 	$( ".loadingLayer" ).hide();
 })
