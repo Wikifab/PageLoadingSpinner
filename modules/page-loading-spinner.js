@@ -6,6 +6,9 @@ $('document').ready(function () {
 	$('body').css('position', 'relative');
 	$('body').css('right', 'initial');
 	$('body').css('left', 'initial');
-	
-	$( ".loadingLayer" ).hide();
+
+	mw.hook( 'pf.formInitializationEnd' ).add( function(div) {
+		$( ".loadingLayer" ).hide();
+	});
+
 })
