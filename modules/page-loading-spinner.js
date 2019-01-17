@@ -7,8 +7,14 @@ $('document').ready(function () {
 	$('body').css('right', 'initial');
 	$('body').css('left', 'initial');
 
-	mw.hook( 'pf.formInitializationEnd' ).add( function(div) {
+	var action = mw.config.get('wgAction');
+
+	if (action == 'formedit') {
+		mw.hook( 'pf.formInitializationEnd' ).add( function(div) {
+			$( ".loadingLayer" ).hide();
+		});
+	} else {
 		$( ".loadingLayer" ).hide();
-	});
+	}
 
 })
